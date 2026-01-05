@@ -9,6 +9,8 @@ spec:
       - name: rotation
         image: quay.io/opsmxpublic/opsmx-custom-binaries:kubectl-spin-cli-git-bash-jq-yq-argocd-v2
         imagePullPolicy: IfNotPresent
+        securityContext:
+          allowPrivilegeEscalation: false
         command: 
           - "sh"
           - "-c"
